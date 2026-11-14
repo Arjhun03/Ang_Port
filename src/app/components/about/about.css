@@ -1,0 +1,32 @@
+.about {
+  min-height: 100vh;
+  padding: 100px 20px;
+  background: #0a0a0a;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-content {
+  max-width: 850px;
+}
+
+.section-label {
+  color: #a855f7;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+.about h1 {
+  font-size: 3rem;
+  margin: 10px 0 30px;
+}
+
+.about p:not(.section-label) {
+  color: #a1a1aa;
+  line-height: 1.8;
+  font-size: 1.05rem;
+  margin-bottom: 20px;
+}
