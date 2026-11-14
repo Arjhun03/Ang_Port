@@ -1,17 +1,33 @@
 <section class="skills">
   <div class="skills-content">
 
-    <p class="section-label">MY SKILLS</p>
+    <div class="skills-heading">
+      <p class="section-label">02 — SKILLS</p>
 
-    <h1>Skills & Technologies</h1>
+      <h1>
+        Tools I use to
+        <span>build.</span>
+      </h1>
+    </div>
 
-    <div class="skills-grid">
-      @for (skill of skills; track skill) {
-        <div class="skill-card">
-          <span class="skill-dot"></span>
-          <span>{{ skill }}</span>
+    <div class="skills-list">
+
+      @for (skill of skills; track skill; let i = $index) {
+        <div class="skill-item">
+
+          <span class="skill-number">
+            {{ (i + 1).toString().padStart(2, '0') }}
+          </span>
+
+          <span class="skill-name">
+            {{ skill }}
+          </span>
+
+          <span class="skill-symbol">↗</span>
+
         </div>
       }
+
     </div>
 
   </div>

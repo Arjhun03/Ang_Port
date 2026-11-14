@@ -1,32 +1,53 @@
 <section class="projects">
   <div class="projects-content">
 
-    <p class="section-label">MY WORK</p>
+    <div class="projects-heading">
+      <p class="section-label">03 — PROJECTS</p>
 
-    <h1>Featured Projects</h1>
+      <h1>
+        Selected
+        <span>work.</span>
+      </h1>
+    </div>
 
-    <div class="projects-grid">
+    <div class="projects-list">
 
-      @for (project of projects; track project.title) {
-        <article class="project-card">
+      @for (project of projects; track project.title; let i = $index) {
 
-          <div class="project-number">
-            0{{ $index + 1 }}
+        <article class="project-item">
+
+          <div class="project-top">
+
+            <span class="project-number">
+              {{ (i + 1).toString().padStart(2, '0') }}
+            </span>
+
+            <span class="project-type">
+              DEVELOPMENT
+            </span>
+
           </div>
 
-          <h2>{{ project.title }}</h2>
+          <div class="project-main">
 
-          <p>
-            {{ project.description }}
-          </p>
+            <h2>{{ project.title }}</h2>
 
-          <div class="technologies">
-            @for (technology of project.technologies; track technology) {
-              <span>{{ technology }}</span>
-            }
+            <p>
+              {{ project.description }}
+            </p>
+
+            <div class="technologies">
+              @for (technology of project.technologies; track technology) {
+                <span>{{ technology }}</span>
+              }
+            </div>
+
           </div>
+
+          <span class="project-arrow">↗</span>
 
         </article>
+
       }
 
     </div>

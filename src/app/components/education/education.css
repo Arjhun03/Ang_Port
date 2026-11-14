@@ -1,135 +1,260 @@
 .education {
   min-height: 100vh;
-  padding: 100px 20px;
+
+  padding: 140px 45px;
 
   background: #0a0a0a;
   color: #ffffff;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .education-content {
   width: 100%;
-  max-width: 900px;
+  max-width: 1400px;
+
+  margin: 0 auto;
+}
+
+
+/* Heading */
+
+.education-heading {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+
+  gap: 40px;
+
+  padding-bottom: 70px;
+
+  border-bottom: 1px solid #27272a;
 }
 
 .section-label {
-  color: #a855f7;
+  margin: 8px 0 0;
 
-  font-size: 0.9rem;
+  color: #897ae1;
+
+  font-size: 0.7rem;
   font-weight: 600;
+
   letter-spacing: 2px;
+  text-transform: uppercase;
 }
 
-.education h1 {
-  font-size: 3rem;
-  margin: 10px 0 50px;
-}
-
-.education-card {
-  padding: 35px;
-
-  background: #111111;
-
-  border: 1px solid #27272a;
-  border-radius: 10px;
-}
-
-.education-header {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-
-  gap: 20px;
-}
-
-.education-card h2 {
+.education-heading h1 {
   margin: 0;
 
-  font-size: 1.6rem;
+  max-width: 800px;
+
+  font-size: clamp(3rem, 7vw, 7rem);
+  font-weight: 600;
+
+  line-height: 0.95;
+  letter-spacing: -4px;
 }
 
-.education-card h3 {
-  margin: 10px 0 0;
+.education-heading h1 span {
+  color: #897ae1;
+}
 
-  color: #c084fc;
 
-  font-size: 1.05rem;
+/* Education */
+
+.education-main {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+
+  gap: 80px;
+
+  padding-top: 70px;
+}
+
+.education-year {
+  display: flex;
+  flex-direction: column;
+
+  gap: 12px;
+}
+
+.education-year span {
+  color: #897ae1;
+
+  font-size: 3rem;
+  font-weight: 600;
+
+  line-height: 1;
+}
+
+.education-year small {
+  color: #52525b;
+
+  font-size: 0.65rem;
+  font-weight: 600;
+
+  letter-spacing: 1.5px;
+}
+
+.education-details {
+  max-width: 850px;
+}
+
+.education-details h2 {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-size: clamp(1.8rem, 3vw, 3rem);
+  font-weight: 500;
+
+  line-height: 1.15;
+  letter-spacing: -1px;
+}
+
+.education-details h3 {
+  margin: 15px 0 30px;
+
+  color: #897ae1;
+
+  font-size: 1rem;
   font-weight: 500;
 }
 
-.education-status {
-  padding: 7px 12px;
+.education-details > p {
+  max-width: 650px;
 
-  border: 1px solid #a855f7;
-  border-radius: 5px;
-
-  color: #a855f7;
-
-  font-size: 0.8rem;
-  font-weight: 600;
-
-  white-space: nowrap;
-}
-
-.education-description {
-  margin: 25px 0;
+  margin: 0;
 
   color: #a1a1aa;
 
-  line-height: 1.7;
+  font-size: 1rem;
+  line-height: 1.8;
 }
 
+
+/* Academic Details */
+
 .academic-details {
+  margin-top: 60px;
+
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 
-  gap: 15px;
-
-  margin-top: 30px;
+  border-top: 1px solid #27272a;
 }
 
 .academic-item {
-  padding: 20px;
+  padding: 25px 20px;
 
-  background: #0a0a0a;
+  border-right: 1px solid #27272a;
+}
 
-  border: 1px solid #27272a;
-  border-radius: 8px;
+.academic-item:first-child {
+  padding-left: 0;
+}
+
+.academic-item:last-child {
+  border-right: none;
 }
 
 .academic-item span {
   display: block;
 
-  margin-bottom: 8px;
+  margin-bottom: 15px;
 
-  color: #71717a;
+  color: #52525b;
 
-  font-size: 0.85rem;
+  font-size: 0.7rem;
+
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
 }
 
 .academic-item strong {
   color: #ffffff;
 
-  font-size: 1.4rem;
+  font-size: 2rem;
+  font-weight: 500;
 }
 
-.academic-item:hover {
-  border-color: #a855f7;
+
+/* Tablet */
+
+@media (max-width: 900px) {
+
+  .education {
+    padding: 100px 30px;
+  }
+
+  .education-heading {
+    grid-template-columns: 1fr;
+
+    gap: 25px;
+  }
+
+  .education-main {
+    grid-template-columns: 150px 1fr;
+
+    gap: 50px;
+  }
+
 }
 
-@media (max-width: 650px) {
-  .education-header {
-    flex-direction: column;
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+  .education {
+    padding: 90px 20px;
+  }
+
+  .education-heading {
+    padding-bottom: 45px;
+  }
+
+  .education-heading h1 {
+    font-size: 3.5rem;
+
+    letter-spacing: -2px;
+  }
+
+  .education-main {
+    grid-template-columns: 1fr;
+
+    gap: 40px;
+
+    padding-top: 45px;
+  }
+
+  .education-year {
+    flex-direction: row;
+
+    align-items: center;
+  }
+
+  .education-year span {
+    font-size: 2rem;
+  }
+
+  .education-details h2 {
+    font-size: 1.8rem;
   }
 
   .academic-details {
     grid-template-columns: 1fr;
+
+    margin-top: 45px;
   }
 
-  .education-card {
-    padding: 25px;
+  .academic-item,
+  .academic-item:first-child {
+    padding: 20px 0;
+
+    border-right: none;
+    border-bottom: 1px solid #27272a;
   }
+
+  .academic-item:last-child {
+    border-bottom: none;
+  }
+
 }

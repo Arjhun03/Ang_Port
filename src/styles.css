@@ -1,44 +1,86 @@
-/* You can add global styles to this file, and also import other style files */
 /* ============================= */
-/* Responsive Design */
+/* Global Reset */
 /* ============================= */
 
-@media (max-width: 650px) {
-  .home,
-  .about,
-  .skills,
-  .education,
-  .projects,
-  .contact {
-    padding: 80px 20px;
-  }
-
-  .home h1,
-  .about h1,
-  .skills h1,
-  .education h1,
-  .projects h1,
-  .contact h1 {
-    font-size: 2.3rem;
-  }
+* {
+  box-sizing: border-box;
 }
 
-@media (max-width: 400px) {
-  .home,
-  .about,
-  .skills,
-  .education,
-  .projects,
-  .contact {
-    padding: 70px 15px;
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+
+  background: #0a0a0a;
+  color: #ffffff;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+
+/* ============================= */
+/* Global Selection */
+/* ============================= */
+
+::selection {
+  background: #897ae1;
+  color: #ffffff;
+}
+
+
+/* ============================= */
+/* Global Scrollbar */
+/* ============================= */
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a0a0a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #27272a;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #897ae1;
+}
+
+/* ============================= */
+/* Global Responsive Fixes */
+/* ============================= */
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+section {
+  width: 100%;
+}
+
+@media (max-width: 600px) {
+  html {
+    overflow-x: hidden;
   }
 
-  .home h1,
-  .about h1,
-  .skills h1,
-  .education h1,
-  .projects h1,
-  .contact h1 {
-    font-size: 2rem;
+  body {
+    overflow-x: hidden;
   }
 }
