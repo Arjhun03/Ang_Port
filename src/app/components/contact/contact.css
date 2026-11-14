@@ -1,8 +1,10 @@
 .contact {
   min-height: 100vh;
   padding: 100px 20px;
+
   background: #0a0a0a;
   color: #ffffff;
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -16,46 +18,85 @@
 
 .section-label {
   color: #a855f7;
+
   font-size: 0.9rem;
   font-weight: 600;
   letter-spacing: 2px;
 }
 
 .contact h1 {
-  font-size: 3rem;
   margin: 10px 0 20px;
+
+  font-size: 3rem;
 }
 
 .contact-intro {
+  max-width: 600px;
+
+  margin: 0 auto 45px;
+
   color: #a1a1aa;
+
   line-height: 1.7;
-  margin-bottom: 40px;
 }
 
 .contact-details {
   display: grid;
   gap: 15px;
+
+  text-align: left;
 }
 
-.contact-details a,
-.contact-details div {
-  padding: 20px;
+.contact-card {
+  padding: 22px 25px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
   background: #111111;
+
   border: 1px solid #27272a;
   border-radius: 8px;
+
   color: #ffffff;
   text-decoration: none;
 }
 
-.contact-details a:hover {
+.contact-card:hover {
   border-color: #a855f7;
 }
 
-.contact-details span {
+.contact-label {
   display: block;
+
+  margin-bottom: 7px;
+
   color: #a855f7;
-  font-size: 0.85rem;
-  margin-bottom: 6px;
+
+  font-size: 0.8rem;
+  font-weight: 600;
+
   text-transform: uppercase;
   letter-spacing: 1px;
+}
+
+.contact-card strong {
+  font-size: 0.95rem;
+  font-weight: 400;
+}
+
+.arrow {
+  color: #a855f7;
+  font-size: 1.3rem;
+}
+
+@media (max-width: 500px) {
+  .contact-card {
+    padding: 20px;
+  }
+
+  .contact-card strong {
+    font-size: 0.85rem;
+  }
 }
